@@ -1,0 +1,14 @@
+{
+  "name": "flink-kafka-to-elk",
+  "config": {
+    "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
+    "tasks.max": "1",
+    "topics": "flink-output",
+    "topic.index.map": "flink-output:flink-index",
+    "key.ignore": "true",
+    "schema.ignore": "true",
+    "connection.url": "http://elasticsearch:9200",
+    "type.name": "test-type",
+    "name": "flink-kafka-to-elk"
+  }
+}

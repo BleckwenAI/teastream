@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="wrapper">
+    <section class="demo plugin">
+
+        <img src="{{ url_for('static', filename='teastream_logo_final.PNG') }}", width="535">
+        <div class="header">
+            Enter a keyword to start tracking in real time
+        </div>
+        <div class="sandbox">
+            <form method="POST">
+                <input name='text' type="text" size= 32 id="input-tags3" class="demo-default" value={{ tracked_string }}>
+            </form>
+            <div id="tracking">
+                Tracking the above keywords<span id="dots"></span>
+            </div>
+            <div id="response">
+
+            </div>
+
+            <a href="http://teastream.bleckwen.cloud:5601">
+            <img src="{{ url_for('static', filename='kibana.png') }}", class="center2">
+            </a>
+
+
+
+        </div>
+
+        <script class="show">
+			$('#input-tags3').selectize({
+				plugins: ['remove_button'],
+				delimiter: ',',
+				persist: false,
+				create: function(input) {
+
+					return {
+						value: input,
+						text: input
+					}
+				},
+				onInitialize: function() {
+				    if ($('#input-tags3').val() == ""){
+                        $('#tracking').hide()
+                    }else{
+                        $('#tracking').show()
+                    }
+				},
+			    onItemAdd: function(values, $item) {
+                    $.post("/", {"start": values});
+                    $('#response').text("✔️ Now tracking the keyword ".concat(values));
+                    $('#response').animate({opacity: "1"});
+                    $('#response').animate({opacity: "0"},2000)
+
+
+                },
+                onItemRemove: function(values) {
+                    $.post("/", {"stop": values})
+                    $('#response').text("❌ Stopped tracking the keyword ".concat(values));
+                    $('#response').animate({opacity: "1"});
+                    $('#response').animate({opacity: "0"},2000)
+                },
+                onChange: function(value) {
+                    if (value == ""){
+                        $('#tracking').hide()
+                    }else{
+                        $('#tracking').show()
+                    }
+                }
+			});
+
+		</script>
+        <script>
+        var dots = 0;
+
+        $(document).ready(function() {
+            setInterval (type, 600);
+        });
+
+        function type() {
+            if(dots < 3) {
+                $('#dots').append('.');
+            dots++;
+            }
+            else {
+                $('#dots').html('');
+                dots = 0;
+            }
+        }
+        </script>
+    </section>
+</div>
+
+
+{% endblock %}

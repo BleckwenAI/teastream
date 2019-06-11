@@ -1,0 +1,15 @@
+{
+  "name": "web-app",
+  "version": "1.0.0",
+  "description": "## go to 'app' ## Set the path for our app ``` export FLASK_APP=routes.py ``` ## Run the app ``` flask run ``` ## Try it out ! The flask app runs on ```localhost:5000```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "selectize": "^0.12.6"
+  }
+}
