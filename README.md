@@ -4,7 +4,7 @@
 
 For more information on this project, you can read this series of articles on the [Bleckwen's Medium tech blog](https://medium.com/bleckwen):
 
-- [Twitter sentiment analysis in real time, part 1.html]() (coming soon)
+- [Twitter sentiment analysis in real time, part 1.html](file:///home/quentincoic/T%C3%A9l%C3%A9chargements/ATY%20-%20Twitter%20sentiment%20analysis%20in%20real%20time,%20part%201.html) (available)
 - [Twitter sentiment analysis in real time, part 2.html]() (not currently available)
 - [Twitter sentiment analysis in real time, part 3.html]() (not currently available)
 
