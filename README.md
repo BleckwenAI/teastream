@@ -6,7 +6,7 @@ For more information on this project, you can read this series of articles on th
 
 - [Twitter sentiment analysis in real time, part 1.html](https://medium.com/bleckwen/twitter-sentiment-analysis-in-real-time-part-1-be3fcc0bb4a2) (available)
 - [Twitter sentiment analysis in real time, part 2.html](https://medium.com/@bleckwen_tech_team/twitter-sentiment-analysis-in-real-time-part-2-b079b72a0e41) (available)
-- [Twitter sentiment analysis in real time, part 3.html]() (not currently available)
+- [Twitter sentiment analysis in real time, part 3.html](https://medium.com/bleckwen/twitter-sentiment-analysis-in-real-time-part-3-9318233804c1) (available)
 
 Time to deploy the project!
 
